@@ -1,0 +1,538 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #312B2B;
+}
+.nav-bar {
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+}
+.logo img {width: 150px;}
+.menu {display: flex;}
+.menu li {
+    padding-left: 35px;
+    position: relative;
+}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #FFFFFF;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a::after {
+    content:'';
+    width: 0%; 
+    height: 5px;
+    background: #f44336;   
+    position: absolute;
+    left: 0%;
+    bottom: -2px;
+    display: block;
+    margin: auto;
+    transition: 0.5s ease;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color: black;
+    cursor: pointer;
+    font-size: 4rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: -590px;
+    left: 230px;
+}
+#check {display: none;}
+#button1{
+    border: none;
+    background-color:#980F0F ;
+    padding: 10px 30px;
+    margin-top: -8px;
+    border-radius: 30px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .4s;
+    margin-left: 35px;
+}
+#button1:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.image-container{
+    width: 55%;
+    height: 120vh;
+    float: right;
+    margin-top: -180px;
+}
+.image{
+    width: 100%;
+    height: 1200px;
+    border-radius: 0px 0px 0px 30px;
+}
+
+.container {
+    width: 35%;
+    height: 800px; 
+    margin: 60px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 0px #d9d9d9;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #d9d9d9;
+    padding: 10px 40px;
+    border-radius: 50px;
+    height: 70px;
+    display: inline-block;
+    box-shadow: 0px 0px 10px 0px #d9d9d9;
+    margin-left: 25%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label[for="name"],
+label[for="email"],
+label[for="password"],
+label[for="conform_password"] {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 30px; /* Increased padding */
+    margin-bottom: 30px; /* Decreased margin-bottom */
+    border-radius: 5px;
+    border: none;
+    background-color: #D9D9D9;
+    color: black;
+    font-size: 20px;
+    height: 50px; /* Increased height */
+}
+
+input[type="submit"] {
+    margin-top: 50px;
+    background-color: #53FF37;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 36px;
+    align-self: flex-end;
+}
+
+.login-text {
+    text-align: right;
+    margin-top: 10px;
+    color: black;
+    font-size: 12px;
+}
+
+.login-text a {
+    color: red;
+    text-decoration: underline;
+}
+
+.terms-text {
+    margin-top: -20px;
+    font-size: 14px;
+    color: black;
+}
+
+
+
+
+
+/* footer ye bata suru xa  */
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 180px;
+    background-image:url(../pictures/footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    width: 100%;
+}
+.social {
+    text-align: center;
+    padding: 25px;
+    color: rgb(255, 255, 255);
+}
+.social a {
+    font-size: 60px;
+    color: inherit;
+    width: 65px;
+    height: 60px;
+    line-height: 60px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+  
+}
+.social a:hover {
+    transform: scale(1.2);
+}
+.social a:hover i.fa-facebook {
+    color:blue; 
+}
+.social a:hover i.fa-instagram {
+    color: #e1306c; 
+}
+.social a:hover i.fa-twitter {
+    color: #00acee; 
+}
+
+/* footer yaha sakinxa  */
+
+
+@media (max-width:1543px){
+    #contact{
+        margin-top:170px ;
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        font-size: 35px;
+    }
+}
+
+@media(max-width: 1450px){
+    .container {
+        width: 40%;
+        height: 800px; 
+        margin: 0px;
+        margin-left: 2%;
+    }
+    .image{
+        width: 100%;
+        height: 1100px;
+        border-radius: 0px 0px 0px 30px;
+    }
+}
+
+@media (max-width:1225px){
+    #contact{
+        margin-top:10px ;
+        background-size: cover;
+        background-position: center;
+        height: 350px;
+        font-size: 35px;
+    }
+}
+
+@media(max-width: 1100px){
+    .container {
+        width: 40%;
+        height: 700px; 
+        margin: 0px;
+        margin-left: 2%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+    padding: 20px; /* Increased padding */
+    }
+    h2 {
+        font-size: 35px;
+        height: 60px;
+        margin-left: 20%;
+    }
+    .image{
+        width: 100%;
+        height: 1000px;
+        border-radius: 0px 0px 0px 30px;
+    }
+    .image-container{
+        height: 0vh;
+    }
+    #contact{
+        margin-top:170px ;
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        font-size: 30px;
+    }
+    .social a{
+        width: 55px;
+        height: 50px;
+    }
+    
+
+}
+
+@media(max-width: 950px){
+    .container {
+        width: 40%;
+        height: 670px; 
+        margin: 0px;
+        margin-left: 2%;
+    }
+    h2 {
+        font-size: 25px;
+        height: 50px;
+        margin-left: 15%;
+    }
+    input[type="submit"] {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+    .image{
+        width: 100%;
+        height: 1000px;
+        border-radius: 0px 0px 0px 30px;
+    }
+
+}
+
+@media(max-width: 800px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #312B2B;
+        transition: all 0.2s ease-in-out;
+    }
+    .nav-bar{
+        background-color: #A19D9D;
+        width: 100%;
+    }
+    #button1{
+        margin-top: 40px;
+    }
+    .logo img {width: 100px;}
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+
+
+    .image-container{
+        width: 100%;
+        height: 100vh;
+        float: none;
+        margin-top: -70px;
+    }
+    .image{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0px 0px 0px 0px;
+    }
+    .container {
+        width: 100%;
+        height: 700px; 
+        margin-top: 0px;
+        margin: 0px;
+        background-color: white;
+        padding: 25px;
+        border-radius: 40px;
+        box-shadow: 0px 0px 10px 0px #d9d9d9;
+    }
+    h2 { 
+        margin-left: 40%;
+    }
+    #contact{
+        background-size: cover;
+        background-position: center;
+        height: 230px;
+        font-size: 25px;
+        margin-top: 40px;
+    }
+    .social a{
+        margin-top: -40px;
+        font-size: 45px;
+        width: 40px;
+        height: 10px;
+    }
+    .social {
+        padding: 22px;
+    }
+}
+
+@media(max-width:700px){
+    #contact{
+        background-size: cover;
+        background-position: center;
+        height: 210px;
+        font-size: 23px;
+    }
+    .social a{
+        width: 40px;
+        height: 0px;
+        font-size: 40px;
+    }
+    .social {
+        padding: 20px;
+    }
+}
+
+@media(max-width: 600px){
+    h2 { 
+        margin-left: 30%;
+    }
+}
+
+@media(max-width:565px){
+    #contact{
+        background-size: cover;
+        background-position: center;
+        height: 180px;
+        font-size: 20px;
+    }
+    .social a{
+        width: 25px;
+        height: 0px;
+        font-size: 30px;
+    }
+    .social {
+        padding: 14px;
+    }
+}
+
+@media(max-width: 450px){
+    h2 { 
+        margin-left: 25%;
+    }
+}
+
+@media(max-width:437px){
+    #contact{
+        background-size: cover;
+        background-position: center;
+        height: 120px;
+        font-size: 15px;
+    }
+    .social a{
+        width: 20px;
+        height: 0px;
+        font-size: 25px;
+    }
+    .social {
+        padding: 10px;
+    }
+}
+
+@media(max-width:378px){
+    #contact{
+        background-size: cover;
+        background-position: center;
+        height: 110px;
+        font-size: 13px;
+    }
+    .social a{
+        width: 16px;
+        height: 0px;
+        font-size: 22px;
+    }
+    .social {
+        padding: 10px;
+    }
+}
+
+@media(max-width:349px){
+    #contact{
+        background-size: cover;
+        background-position: center;
+        height: 100px;
+        font-size: 13px;
+    }
+}
+
+
+/* Hamburger size as a screem*/
+@media(max-width:565px){
+    .logo img {width: 90px;}
+}
+@media(max-width:525px){
+    .logo img {width: 85px;}
+}
+@media(max-width:378px){
+    .logo img {width: 80px;}
+}
+/*----------------------------------*/
+@media(max-width:760px){
+    .close-menu {
+    left: 200px;
+    }
+}
+@media(max-width:760px){
+    .close-menu {
+       left: 180px;
+    }
+}
+@media(max-width:616px){
+    .close-menu {
+        left: 160px;
+    }
+}
+@media(max-width:616px){
+    .close-menu {
+        left: 140px;
+    }
+}
+@media(max-width:500px){
+    .close-menu {
+        left: 120px;
+    }
+}
+@media(max-width:436px){
+    .close-menu {
+        left: 100px;
+    }
+}
+@media(max-width:376px){
+    .close-menu {
+        left: 80px;
+    }
+}
+/*----------------------------------*/
+
+ul{
+    list-style: none;
+}
